@@ -1,0 +1,50 @@
+# Sample system description for a fictional small GovCon handling CUI.
+#
+# This is the input ComplyScan reads. In a real engagement these values would be
+# collected from configuration exports, interviews, and evidence rather than
+# hand-written, but the shape is the same: observed settings mapped to keys the
+# control catalog checks against.
+#
+# The values below are deliberately mixed so the assessment produces both
+# passing and failing controls.
+
+system_name: "Cardinal Ridge Technologies - CUI Enclave"
+
+configuration:
+  access_control:
+    rbac_enabled: true
+    least_privilege_enforced: true
+    privileged_accounts_reviewed_days: 180      # fails 3.1.5 (>90)
+    remote_access_monitored: true
+    external_connections_controlled: false      # fails 3.1.20
+
+  audit:
+    logging_enabled: true
+    user_attribution_enabled: true
+    log_retention_days: 45                       # fails 3.3.8 (<90)
+
+  config_mgmt:
+    baseline_documented: true
+    hardening_standard: "CIS"
+    unused_services_disabled: false              # fails 3.4.6
+
+  identity:
+    mfa_enabled: true
+    min_password_length: 14
+    password_hashing: "bcrypt"
+
+  incident_response:
+    plan_documented: true
+    reporting_process_defined: true
+
+  risk:
+    vuln_scan_frequency_days: 90                  # fails 3.11.2 (>30)
+    remediation_sla_defined: true
+
+  crypto:
+    fips_validated: false                         # fails 3.13.11 (weight 5)
+    encryption_at_rest: true
+
+  integrity:
+    patch_management_enabled: true
+    endpoint_protection: true

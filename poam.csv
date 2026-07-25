@@ -1,0 +1,8 @@
+item,control_id,family,weakness,weight,planned_remediation,target_date,status
+POAM-001,3.11.2,Risk Assessment,Scan for vulnerabilities periodically: Control not met per automated assessment.,5,Scan for vulnerabilities at least every 30 days.,2026-08-22,Open
+POAM-002,3.13.11,System and Communications Protection,Use FIPS-validated cryptography to protect CUI: Control not met per automated assessment.,5,Use FIPS 140-validated cryptographic modules for CUI.,2026-08-22,Open
+POAM-003,3.1.5,Access Control,Employ least privilege for privileged accounts: Control not met per automated assessment.,3,Review privileged accounts at least every 90 days.,2026-09-21,Open
+POAM-004,3.2.1,Awareness and Training,Ensure personnel are trained on security risks: Requires manual validation.,3,Retain security awareness training records for review.,2026-09-21,Open
+POAM-005,3.3.8,Audit and Accountability,Protect audit information from unauthorized access: Control not met per automated assessment.,3,Retain protected audit logs for at least 90 days.,2026-09-21,Open
+POAM-006,3.4.6,Configuration Management,Apply the principle of least functionality: Control not met per automated assessment.,3,"Disable unnecessary ports, protocols, and services.",2026-09-21,Open
+POAM-007,3.1.20,Access Control,Control connections to external systems: Control not met per automated assessment.,1,Define and enforce an external connection policy.,2026-10-21,Open
